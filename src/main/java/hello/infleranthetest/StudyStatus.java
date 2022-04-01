@@ -1,5 +1,5 @@
 package hello.infleranthetest;
 
 public enum StudyStatus {
-	DRAFT, STARTED, ENDED
+	DRAFT, STARTED, ENDED, OPENED
 }

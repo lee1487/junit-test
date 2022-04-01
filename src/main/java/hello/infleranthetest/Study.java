@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class Study {
 
-	private StudyStatus status;
+	private StudyStatus status = StudyStatus.DRAFT;
 	private int limit;
 	private String name;
 	private LocalDateTime openedDateTime;
@@ -33,6 +33,12 @@ public class Study {
 
 	public String getName() {
 		return name;
+	}
+
+	public void open() {
+        this.openedDateTime = LocalDateTime.now();
+        this.status = StudyStatus.OPENED;
+
 	}
 
 	@Override

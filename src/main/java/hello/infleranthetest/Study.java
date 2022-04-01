@@ -1,12 +1,15 @@
 package hello.infleranthetest;
 
+import java.time.LocalDateTime;
+
 public class Study {
 
 	private StudyStatus status;
-	private int limit; 
+	private int limit;
 	private String name;
-	
-	
+	private LocalDateTime openedDateTime;
+
+
 	public Study(int limit, String name) {
 		super();
 		this.limit = limit;
@@ -36,10 +39,10 @@ public class Study {
 	public String toString() {
 		return "Study [status=" + status + ", limit=" + limit + ", name=" + name + "]";
 	}
-	
-	
 
-	
-	
-	
+
+
+
+
+
 }

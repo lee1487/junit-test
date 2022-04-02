@@ -7,7 +7,7 @@ public class Study {
 	private StudyStatus status = StudyStatus.DRAFT;
 	private int limit;
 	private String name;
-	private LocalDateTime openedDateTime;
+//	private LocalDateTime openedDateTime;
 
 
 	public Study(int limit, String name) {
@@ -36,7 +36,7 @@ public class Study {
 	}
 
 	public void open() {
-        this.openedDateTime = LocalDateTime.now();
+//        this.openedDateTime = LocalDateTime.now();
         this.status = StudyStatus.OPENED;
 
 	}

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
-import hello.infleranthetest.Study;
+import hello.infleranthetest.domain.Study;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

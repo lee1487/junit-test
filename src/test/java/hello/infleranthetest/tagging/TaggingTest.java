@@ -6,9 +6,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import hello.infleranthetest.Study;
 import hello.infleranthetest.annotation.FastTest;
 import hello.infleranthetest.annotation.SlowTest;
+import hello.infleranthetest.domain.Study;
 
 class TaggingTest {
 

@@ -7,7 +7,7 @@ import hello.infleranthetest.domain.Study;
 
 public interface MemberService {
 
-//	void validate(Long memberId) throws InvalidMemberException;
+	void validate(Long memberId);
 
 	Optional<Member> findById(Long memberId);
 

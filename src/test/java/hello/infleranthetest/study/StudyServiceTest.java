@@ -23,13 +23,11 @@ import hello.infleranthetest.member.MemberService;
 @ExtendWith(MockitoExtension.class)
 class StudyServiceTest {
 
-//	@Mock MemberService memberService;
-//	@Mock StudyRepository studyRepository;
+	@Mock MemberService memberService;
+	@Mock StudyRepository studyRepository;
 
 	@Test
-	void createNewStudyTest(@Mock MemberService memberService,
-							@Mock StudyRepository studyRepository) {
-
+	void createNewStudyTest() {
 		StudyService studyService = new StudyService(memberService, studyRepository);
 		assertNotNull(studyService);
 
@@ -54,8 +52,7 @@ class StudyServiceTest {
 	}
 
 	@Test
-	void createNewStudyTest2(@Mock MemberService memberService,
-							@Mock StudyRepository studyRepository) {
+	void createNewStudyTest2() {
 
 		StudyService studyService = new StudyService(memberService, studyRepository);
 		assertNotNull(studyService);
@@ -76,9 +73,23 @@ class StudyServiceTest {
 		});
 
 		assertEquals(Optional.empty(), memberService.findById(3L));
+	}
 
+	@Test
+	void practiceTest() {
+		StudyService studyService = new StudyService(memberService, studyRepository);
+		Study study = new Study(10, "테스트");
 
+		Member member = new Member();
+		member.setId(1L);
+		member.setEmail("dlgustp1487@naver.com");
 
+		when(memberService.findById(1L)).thenReturn(Optional.of(member));
+		when(studyRepository.save(study)).thenReturn(study);
+
+		studyService.createNewStudy(1L, study);
+		assertNotNull(study.getOwner());
+		assertEquals(member, study.getOwner());
 	}
 
 }

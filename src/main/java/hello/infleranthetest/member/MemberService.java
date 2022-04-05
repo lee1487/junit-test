@@ -11,5 +11,9 @@ public interface MemberService {
 
 	Optional<Member> findById(Long memberId);
 
+	void notify(Study newStudy);
+
+	void notify(Member member);
+
 
 }
